@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Button from "./components/Button";
 import Accordion from "./components/Accordion";
+import AccordionStyled from "./components/AccordionStyled";
 
 function App() {
   return (
@@ -11,11 +12,19 @@ function App() {
       <br />
       <br />
       <Accordion
-        label="Expand"
+        label="Expand 1"
         onClick={() => console.log("Clicked accordion")}
       >
-        <p>Accordion content.</p>
+        <p>This accordion uses conditional rendering for the content.</p>
       </Accordion>
+      <br />
+      <br />
+      <AccordionStyled
+        label="Expand 2"
+        onClick={() => console.log("Clicked accordion")}
+      >
+        <p>This accordion uses CSS styles to show the content.</p>
+      </AccordionStyled>
     </div>
   );
 }

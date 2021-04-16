@@ -1,9 +1,13 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the app", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const button = screen.getByRole("button", { name: /click/i });
+  const accordion = screen.getByRole("button", { name: /expand 1/i });
+  const accordionStyled = screen.getByRole("button", { name: /expand 2/i });
+
+  expect(button).toBeInTheDocument();
+  expect(accordion).toBeInTheDocument();
+  expect(accordionStyled).toBeInTheDocument();
 });
