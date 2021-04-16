@@ -9,11 +9,12 @@ function App() {
     <div className="App">
       <Button label="Click" onClick={() => console.log("Hello world!")} />
       <br />
+      <br />
       <Accordion
         label="Expand"
         onClick={() => console.log("Clicked accordion")}
       >
-        Accordion content.
+        <p>Accordion content.</p>
       </Accordion>
     </div>
   );

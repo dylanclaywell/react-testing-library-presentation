@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
   button: {
     padding: "1em",
     width,
-    border: "1px solid gray",
+    border: "1px solid #dadada",
     outline: "none",
     background: "none",
     cursor: "pointer",
@@ -14,10 +14,18 @@ const useStyles = createUseStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    font: "inherit",
+    boxSizing: "initial",
+    transition: "300ms all",
+    "&:hover": {
+      background: "#e8e8e8",
+    },
   },
   content: {
     padding: "1em",
     width,
+    border: "1px solid #dadada",
+    borderTop: "none",
   },
 });
 
